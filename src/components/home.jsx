@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Hero from '../assets/hero.jpg';
+import Background from '../assets/background.jpg';
 
 const Home = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,17 +8,25 @@ const Home = () => {
     setMenuOpen(!menuOpen);
   };
 
-//   const closeMenu = () => {
-//     setMenuOpen(false);
-//   };
-
   return (
-    <div className="overflow-hidden">
-      <nav className="bg-gray-800 p-4">
+    <div>
+      {/* Navigation */}
+      <nav className="bg-black p-4 relative">
         <div className="container mx-auto flex items-center justify-between">
           <div className="text-white">
-            <h1 className="text-xl text-white font-bold text-start">GHINIUD</h1>
-          </div>          
+            <h1 className="text-xl text-white font-bold">GHINIUD</h1>
+          </div>
+          <div className="hidden md:flex space-x-4 ">
+            <a href="#" className="text-red-400">
+              Home
+            </a>
+            <a href="#" className="text-white">
+              About
+            </a>
+            <a href="#" className="text-white">
+              Contact
+            </a>
+          </div>
           <div className="md:hidden">
             <button
               className="text-white focus:outline-none"
@@ -39,25 +47,29 @@ const Home = () => {
           </div>
         </div>
       </nav>
+      
+
+      {/* Mobile Navigation Menu */}
+      {menuOpen && (
+        <div className="md:hidden bg-black p-4">
+          <a href="#" className="block text-red-600 py-2">
+            Home
+          </a>
+          <a href="#" className="block text-red-600 py-2">
+            About
+          </a>
+          <a href="#" className="block text-red-600 py-2">
+            Contact
+          </a>
+        </div>
+      )}
       <div
-        className="h-screen flex items-center justify-center text-white relative"
+        className="h-screen flex items-center justify-center text-white"
         style={{
-          background: `url(${Hero}) center/cover no-repeat`,
+          background: `url(${Background}) center/cover no-repeat`,
         }}
       >
-        <div className="container mx-auto p-4 relative">
-        <div className="mt-4">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="bg-gray-700 text-white p-2 w-full rounded"
-          />
-        </div>
-        <h1 className="text-4xl font-bold z-10">Gaming Wave</h1>
-          <p className='text-2xl font-semibold text-red-400' >
-            Get all the info you need about your favorite games and streamers here
-          </p>
-        </div>
+        <h1 className="text-4xl font-bold text-red-600 relative z-10">Gaming Wave</h1>
       </div>
     </div>
   );
