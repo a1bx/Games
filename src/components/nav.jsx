@@ -54,7 +54,13 @@ return (
             About
         </a>
         <a href="#" className="block text-red-600 py-2">
-            Contact
+            Genre
+        </a>
+        <a href="#" className="block text-red-600 py-2">
+            Trending
+        </a>
+        <a href="#" className="block text-red-600 py-2">
+            Settings
         </a>
         </div>
     )}
