@@ -1,20 +1,27 @@
 import React from 'react';
 import Abstract from '../assets/abstract.mp4';
-import Background from '../assets/background.jpg';
 
-const Home = () => {
+const HomePage = () => {
   return (
-    // <div className='home'>
-    //   <video src={Abstract} autoplay loop muted/>
-    // </div>
-    <div
-      className="h-screen flex items-center justify-center text-white"
-      style={{
-        background: `url(${Background}) center/cover no-repeat`,
-      }}
-    >
-      <h1 className="text-4xl font-bold text-red-600 absolute z-10">Gaming Wave</h1>
+    <div className="relative h-screen">
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover"
+        autoPlay
+        loop
+        muted
+      >
+        <source src={Abstract} type="video/mp4" />
+      </video>
+      <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
+      <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center text-white z-10">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">Gaming wave</h1>
+          <p className="text-lg">Find all trending games here</p>
+        </div>
+      </div>
     </div>
   );
 };
-export default Home;
+
+export default HomePage;
+
