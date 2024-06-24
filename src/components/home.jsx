@@ -1,7 +1,9 @@
 import React from 'react';
 import Abstract from '../assets/abstract.mp4';
 
+
 const HomePage = () => {
+  
   return (
     <div className="relative h-screen">
       <video
