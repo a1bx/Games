@@ -14,10 +14,10 @@ return (
             <h1 className="text-xl text-white font-bold">GHINIUD</h1>
         </div>
         <div className="hidden md:flex space-x-4 ">
-            <a href="#" className="text-red-400">
+            <a href="home" className="text-red-400">
             Home
             </a>
-            <a href="#" className="text-white">
+            <a href="about" className="text-white">
             About
             </a>
             <a href="#" className="text-white">
